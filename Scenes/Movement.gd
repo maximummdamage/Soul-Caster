@@ -3,9 +3,37 @@ extends Node
 class_name Movement
 
 # Member variables
+var max_speed
+var unscaled_speed_vec
 var speed
 var accel
 var decel
+
+
+func _ready():
+	max_speed = 100
+	unscaled_speed_vec = Vector2(0, 0)
+
+func _current_unscaled_speed():
+	return sqrt(pow(unscaled_speed_vec.x, 2) + pow(unscaled_speed_vec.y, 2))
+
+func scaled_speed():
+	pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # accelerate up to speed
 # take current speed, add speed unless at or above max speed
@@ -49,6 +77,9 @@ func stop(current_speed):
 # set the rate of deceleration
 func set_decel(_decel):
 	decel = _decel
+
+func current_speed(x, y):
+	pass
 
 # Constructor
 # decel = speed unless set otherwise with set_decel()
