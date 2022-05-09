@@ -4,21 +4,21 @@ class_name Movement
 
 # Member variables
 var max_speed
-var unscaled_speed_vec
-var speed
 var accel
+var dir
+
+
+var speed_vec
+var diag_max_speed
+
+var speed
 var decel
 
 
 func _ready():
 	max_speed = 100
-	unscaled_speed_vec = Vector2(0, 0)
+	speed_vec = Vector2(0, 0)
 
-func _current_unscaled_speed():
-	return sqrt(pow(unscaled_speed_vec.x, 2) + pow(unscaled_speed_vec.y, 2))
-
-func scaled_speed():
-	pass
 
 
 
