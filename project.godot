@@ -8,16 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node",
-"class": "Movement",
-"language": "GDScript",
-"path": "res://Scripts/Movement.gd"
-} ]
-_global_script_class_icons={
-"Movement": ""
-}
-
 [application]
 
 config/name="Recaster"
